@@ -61,6 +61,7 @@ pub fn shape(
     // Get buffer as string
     let buf_u8: Vec<u8> = buffer.glyphs.iter().map(|g| g.codepoint as u8).collect();
     let str_buf = String::from_utf8_lossy(&buf_u8);
+    let buf_len = str_buf.chars().count();
     // Here's a hardcoded assumption that the story we want to build starts with "Once upon a time";
     // cf. the comment above, just encoding actual text we get into tokens instead, we get
     // text generation for any string. This is fine enough for a demo though.
@@ -87,7 +88,7 @@ pub fn shape(
             flags: 0,
             x_advance: 0,
             y_advance: 0,
-            cluster: ix as u32,
+            cluster: if ix < buf_len { ix } else { buf_len - 1 } as u32,
             x_offset: 0,
             y_offset: 0,
         })
