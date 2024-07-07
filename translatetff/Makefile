@@ -1,5 +1,5 @@
 BASE_FONT=../OpenSans-Regular.ttf
-TARGET_FONT=llama.ttf
+TARGET_FONT=translate.ttf
 WASM=translatettf_bg.wasm
 
 HG_REPO=https://huggingface.co/lmz/candle-quantized-t5
