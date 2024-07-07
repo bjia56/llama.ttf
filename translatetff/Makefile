@@ -21,3 +21,8 @@ $(TOKENIZER):
 
 $(CONFIG):
 	curl -s -S -L -o $(CONFIG) $(HG_REPO)/resolve/main/$(CONFIG)
+
+install:
+	cp $(TARGET_FONT) $(HOME)/.local/share/fonts/
+
+.PHONY: install
