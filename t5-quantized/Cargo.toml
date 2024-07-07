@@ -1,0 +1,10 @@
+[package]
+name = "t5-quantized"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+candle-core = { version = "0.6.0" }
+candle-transformers = { version = "0.6.0" }
+tokenizers = { version = "0.19.1", features = ["unstable_wasm"], default-features = false }
+serde_json = { version = "1.0.99" }

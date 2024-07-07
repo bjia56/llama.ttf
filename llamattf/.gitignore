@@ -1,0 +1,4 @@
+*.gguf
+tokenizer.json
+config.json
+*.ttf
